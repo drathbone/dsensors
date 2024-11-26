@@ -15,7 +15,7 @@ esphome:
   platformio_options:
     board_build.flash_mode: dio
     board_build.f_cpu: 80000000L
-  name_add_mac_suffix: False
+  name_add_mac_suffix: true
   project:
     name: drathbone.D-Presence1
     version: "1.0"
