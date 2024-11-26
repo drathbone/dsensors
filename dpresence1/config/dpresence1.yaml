@@ -48,8 +48,7 @@ esp32:
 api:
   
 ota:
-  - platform: esphome
-    password: $ota_pass
+  platform: esphome
 
 logger:
 
