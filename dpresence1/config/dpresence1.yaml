@@ -1,24 +1,25 @@
 substitutions:
   # Set the device name
-  name: d-presence1
-  # Set the friendly name
-  friendly_name: D-Presence1
-  #Provide an OTA password:
-  ota_pass: "password123"
-
+  name: dpresence1
+  device_name: DPresence1
+  device_make: DRathbone
+  sw_version: "1.0.0"
+  
 ### No modifications needed below here ###
 ####################################################################################
 
 esphome:
   name: $name
-  friendly_name: $friendly_name
+  friendly_name: $device_name
+  comment: "${device_name} by ${device_make}"
   platformio_options:
     board_build.flash_mode: dio
     board_build.f_cpu: 80000000L
   name_add_mac_suffix: true
   project:
-    name: drathbone.D-Presence1
-    version: "1.0"
+    name: "${device_make}.${device_name}"
+    version: "${sw_version}"
+  min_version: "2024.9.2"
 
 dashboard_import:
   package_import_url: github://drathbone/dsensors/dpresence1/config/dpresence1.yaml@main
