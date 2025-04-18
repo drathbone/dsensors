@@ -3,7 +3,7 @@ substitutions:
   name: dpresence1
   device_name: DPresence1
   device_make: DRathbone
-  sw_version: "1.0.0"
+  sw_version: "1.0.1"
   
 ### No modifications needed below here ###
 ####################################################################################
@@ -23,7 +23,7 @@ esphome:
 
 dashboard_import:
   package_import_url: github://drathbone/dsensors/dpresence1/config/dpresence1.yaml@main
-  import_full_config: false
+  import_full_config: true
 
 wifi:
   power_save_mode: NONE
@@ -76,6 +76,7 @@ sensor:
   - platform: ld2410
     light:
       name: Light
+      unit_of_measurement: "lx"
     moving_distance:
       name : Moving Distance
     still_distance:
